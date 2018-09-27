@@ -3,13 +3,13 @@ O artigo Jellyfish: Networking Data Centers Randomly de Singla et al. 2012 exami
 
 *ToR: modelo em que os servidores são conectados a um ou dois Switches instalados dentro do Rack. Estes switches por sua vez, são conectados aos switches de agregação.
 
-##### Que problema a Jellyfish estava tentando resolver?
+#### Que problema a Jellyfish estava tentando resolver?
 A experiência da indústria indica que a capacidade de expansão de datacenters é essencial para que seja possível aumentar a capacidade de forma incremental e assim poder lidar com a crescente quantidade de tráfego. Entretanto, como a estrutura das redes de alta largura de banda são normalmente rígidas e seu layout é determinado pelo número de portas disponíveis no switch (tal como na tradicional Fat-tree), a expansão incremental acaba sendo afetada. Neste sentido, os autores propuseram o Jellyfish, uma nova arquitetura de rede que adota uma topologia de grafo aleatório para a interconexão de rede de alta capacidade que objetiva viabilizar a incorporação harmoniosa de servidores adicionais (expansão incremental) e promover uma utilização mais eficiente da rede.
 
-##### Qual era estado da arte no momento em que o artigo foi publicado:
+#### Qual era estado da arte no momento em que o artigo foi publicado:
 No momento em que o artigo foi publicado havia propostas para redes de alta capacidade que exploravam a estrutura com relação a topologia e roteamento. Entre elas, estavam projetos que utilizavam servidores para encaminhamento, projetos com tecnologia de rede óptica e a Fat-tree. Entretanto, segundo os autores nenhuma destas arquiteturas abordava o problema de expansão incremental. Outras soluções utilizadas como o DCell e BCube até permitiam a expansão desde que fosse planejada e para um tamanho predefinido, no entanto demandavam servidores com portas livres e reservadas para futuras expansões. Na Fat-tree para adicionar servidores e preservar as propriedades da estrutura era necessário a substituição de grande número de elementos além de demandar uma extensa religação. Como pode ser observado, não havia abordagens para a expansão incremental ser realizada de forma simplificada.
 
-##### Um breve resumo dos métodos e resultados do artigo original (com foco especial na Figura 9 e na Tabela 1):
+#### Um breve resumo dos métodos e resultados do artigo original (com foco especial na Figura 9 e na Tabela 1):
 
 Os autores de Jellyfish afirmam que uma rede de comutadores conectados aleatoriamente fornece uma estrutura mais fluida além de disponibilizar throughput maior ou igual a topologia tradicional. O ganho de desempenho vem do fato de que existem muitos caminhos entre os nós resultando em mais links que são totalmente aproveitados. Como resultado é gerada maior largura de banda de rede, melhor eficácia para utilizar toda a capacidade da rede e até mesmo evitar o congestionamento. A Figura 9 demonstra que a técnica de roteamento escolhida pode alavancar essa arquitetura.
 <p align="center"><img src="https://image.ibb.co/cAeZE9/dados_originais.png" alt="dados_originais" border="0"></p> 
@@ -19,7 +19,7 @@ O gráfico (Figura 9) mostra a distribuição do número de caminhos distintos p
 
 A Tabela 1 mostra os resultados da execução de algumas simulações de pacotes de controle de congestionamento (TCP 1 e 8 fluxos e MPTCP) e dois algoritmos de roteamento (ECMP e K-Shortest-Path) nas distintas topologias Jelllyfish (780 servidores) e Fat-tree (686 servidores). Os resultados apontam que o uso do k shortest-paths em TCP com Jellyfish apresenta throughput semelhante à execução do ECMP em Fat-tree, isto mostra que Jellyfish alcança o mesmo desempenho da Fat–tree.  Outra característica observada foi que o uso do k-shortest-path apresenta melhores resultados quando comparado ao ECMP na topologia Jellyfish.
 
-##### Detalhe sobre sua abordagem para reproduzir a figura. Se você escolheu uma plataforma ou ferramenta específica, explique por que você fez essa escolha. Destaque as vantagens da sua abordagem, bem como quaisquer inconvenientes. Houve algum desafio que você acertou ou suposições que você precisava fazer?
+#### Detalhe sobre sua abordagem para reproduzir a figura. Se você escolheu uma plataforma ou ferramenta específica, explique por que você fez essa escolha. Destaque as vantagens da sua abordagem, bem como quaisquer inconvenientes. Houve algum desafio que você acertou ou suposições que você precisava fazer?
 
 Os experimentos foram executados em servidores criados na Google Cloud:
 
@@ -41,7 +41,7 @@ A simulação foi baseada no código disponibilizado por Jean-Luc Watson, https:
 
 Para a simulação da topologia Fat-Tree foi utilizado o repositório disponibilizado por Pranav Yerabati Venkata (https://github.com/pranav93y) com algumas adaptações para o propósito desta reprodução. O uso do Mininet foi fortemente recomentado por grande parte dos pesquisadores que reproduziram este artigo, por esta razão manteve-se a sua utilização.
 
-##### Qual o resultado que você conseguiu? Correspondeu ao papel original?
+#### Qual o resultado que você conseguiu? Correspondeu ao papel original?
 
 Foram necessárias várias simulações para encontrar uma quantidade de servidores que representassem resultados próximos ao do experimento apresentado na Tabela 1. O número máximo suportado, para que as simulações fossem concluídas com sucesso (com 1 e 8 fluxos) foi de 32 servidores. Acima desta quantia de servidores as simulações se tornavam muito instáveis. 
 
