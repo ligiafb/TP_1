@@ -117,7 +117,7 @@ make install
 
 Clonar o git do projeto:
 ```
-git clone https://github.com/fernandonakayama/TP_1.git
+git clone https://github.com/ligiafb/TP_1.git
 cd TP_1/
 sudo python tcp.py
 ```
@@ -135,7 +135,7 @@ O resultado será exibido após a execução do script.
 
 Clonar o git do projeto:
 ```
-git clone https://github.com/fernandonakayama/TP_1.git
+git clone https://github.com/ligiafb/TP_1.git
 cd TP_1/
 sudo python mptcp.py
 ```
