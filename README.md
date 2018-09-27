@@ -12,6 +12,12 @@ No momento em que o artigo foi publicado havia propostas para redes de alta capa
 
 #### Um breve resumo dos métodos e resultados do artigo original (com foco especial na Figura 9 e na Tabela 1):
 
+Uma topologia Jellyfish é construída com vários switches conectados aleatoriamente. Basicamente é escolhido um par aleatório de switches com portas livres, caso estes switches não estejam conectados, o link é realizado entre eles. Este processo é repetido até que nenhuma porta permaneça livre. Esta característica traz uma flexibilidade de conexão para novos equipamentos quando comparado a topologia tradicional Fat-tree, sempre que houver a necessidade de adicionar um novo switch, basta escolher aleatoriamente um link e conecta-lo ao novo equipamento, independente inclusive da quantia de portas do switch.
+
+<p align="center"><img src="https://image.ibb.co/bBeJ99/jelly_fat.png" alt="dados_originais" border="0"></p> 
+
+
+
 Os autores de Jellyfish afirmam que uma rede de comutadores conectados aleatoriamente fornece uma estrutura mais fluida além de disponibilizar throughput maior ou igual a topologia tradicional. O ganho de desempenho vem do fato de que existem muitos caminhos entre os nós resultando em mais links que são totalmente aproveitados. Como resultado é gerada maior largura de banda de rede, melhor eficácia para utilizar toda a capacidade da rede e até mesmo evitar o congestionamento. A Figura 9 demonstra que a técnica de roteamento escolhida pode alavancar essa arquitetura.
 <p align="center"><img src="https://image.ibb.co/cAeZE9/dados_originais.png" alt="dados_originais" border="0"></p> 
 
@@ -140,5 +146,3 @@ Os resultados da topologia Fat-Tree são obtidos executando o script fattree.sh
 sudo sh ./fattree.sh
 ```
 O resultado será exibido após a execução do script.
-
-
