@@ -106,8 +106,6 @@ make modules
 make modules_install
 make install
 ```
-<p align="left">  <img src="https://image.ibb.co/gX7Jrp/mptcp_compilado.png" alt="dados_originais" border="0"></p>
-
 **7- Conectar a instância com TCP (Via painel de controle do google cloud ou cliente SSH de sua preferência)**
 
 Clonar o git do projeto:
