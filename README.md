@@ -110,8 +110,8 @@ make install
 
 Clonar o git do projeto:
 ```
-git clone https://github.com/fernandonakayama/TP1.git
-cd TP1/
+git clone https://github.com/fernandonakayama/TP_1.git
+cd TP_1/
 sudo python tcp.py
 ```
 A figura9 estará disponível na raiz do diretório, com o nome ***figure9.eps***
@@ -128,8 +128,8 @@ O resultado será exibido após a execução do script.
 
 Clonar o git do projeto:
 ```
-git clone https://github.com/fernandonakayama/TP1.git
-cd TP1/
+git clone https://github.com/fernandonakayama/TP_1.git
+cd TP_1/
 sudo python mptcp.py
 ```
 Os resultados de MPTCP com 1 e 8 fluxos com ECMP e K-shortest-Paths para topologia Jellyfish serão exibidos ao término da execução.
