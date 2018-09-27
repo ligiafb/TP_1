@@ -12,7 +12,7 @@ No momento em que o artigo foi publicado havia propostas para redes de alta capa
 
 #### Um breve resumo dos métodos e resultados do artigo original (com foco especial na Figura 9 e na Tabela 1):
 
-Uma topologia Jellyfish é construída com vários switches conectados aleatoriamente. Basicamente é escolhido um par aleatório de switches com portas livres, caso estes switches não estejam conectados, o link é realizado entre eles. Este processo é repetido até que nenhuma porta permaneça livre. Esta característica traz uma flexibilidade de conexão para novos equipamentos quando comparado a topologia tradicional Fat-tree, sempre que houver a necessidade de adicionar um novo switch, basta escolher aleatoriamente um link e conecta-lo ao novo equipamento, independente inclusive da quantia de portas do switch.
+Uma topologia Jellyfish é construída com vários switches conectados aleatoriamente. Basicamente é escolhido um par aleatório de switches com portas livres, caso estes switches não estejam conectados, o link é realizado entre eles. Este processo é repetido até que nenhuma porta permaneça livre. Esta característica traz uma flexibilidade de conexão para novos equipamentos quando comparado a topologia tradicional Fat-tree, sempre que houver a necessidade de adicionar um novo switch, basta escolher aleatoriamente um link e conectá-lo ao novo equipamento, independente da quantia de portas do switch.
 
 <p align="center"><img src="https://image.ibb.co/bBeJ99/jelly_fat.png" alt="dados_originais" border="0"></p> 
 
