@@ -1,0 +1,1 @@
+ft ecmp8 tcp 1flow average : 96.03

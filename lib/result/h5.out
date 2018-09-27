@@ -1,0 +1,19 @@
+result/Connecting to host 10.3.0.2, port 5201
+[  4] local 10.1.0.2 port 38082 connected to 10.3.0.2 port 5201
+[ ID] Interval           Transfer     Bandwidth       Retr  Cwnd
+[  4]   0.00-56.60  sec  87.7 KBytes  12.7 Kbits/sec    5   2.83 KBytes       
+[  4]  56.60-56.60  sec  0.00 Bytes  0.00 bits/sec    0   2.83 KBytes       
+[  4]  56.60-56.60  sec  0.00 Bytes  0.00 bits/sec    0   2.83 KBytes       
+[  4]  56.60-56.60  sec  0.00 Bytes  0.00 bits/sec    0   2.83 KBytes       
+[  4]  56.60-56.60  sec  0.00 Bytes  0.00 bits/sec    0   2.83 KBytes       
+[  4]  56.60-56.60  sec  0.00 Bytes  0.00 bits/sec    0   2.83 KBytes       
+[  4]  56.60-56.60  sec  0.00 Bytes  0.00 bits/sec    0   2.83 KBytes       
+[  4]  56.60-56.60  sec  0.00 Bytes  0.00 bits/sec    0   2.83 KBytes       
+[  4]  56.60-56.60  sec  0.00 Bytes  0.00 bits/sec    0   2.83 KBytes       
+[  4]  56.60-56.60  sec  0.00 Bytes  0.00 bits/sec    0   2.83 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  4]   0.00-56.60  sec  87.7 KBytes  12.7 Kbits/sec    5             sender
+[  4]   0.00-56.60  sec  2.83 KBytes   409 bits/sec                  receiver
+
+iperf Done.
