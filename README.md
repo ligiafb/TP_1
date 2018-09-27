@@ -1,4 +1,5 @@
-### Trabalho Prático 1 - INFO7015
+### Trabalho Prático 1 - Disciplina INFO7015 - Professora: Michele Nogueira, D.Sc.
+
 O artigo Jellyfish: Networking Data Centers Randomly de Singla et al. 2012 examina as técnicas existentes para a conexão de switches top-of-rack (ToR)*,  apresenta as características e desvantagens destas e por fim propõe uma nova solução de topologia chamada Jellyfish. O objetivo deste trabalho é a reprodução parcial deste artigo. Os resultados da Figura 9 e Tabela 1 foram examinados utilizando o Mininet.
 
 *ToR: modelo em que os servidores são conectados a um ou dois Switches instalados dentro do Rack. Estes switches por sua vez, são conectados aos switches de agregação.
