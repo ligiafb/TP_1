@@ -74,7 +74,7 @@ Para a reprodução da Figura 9 não foi necessário modificar o número de serv
 
 ## Passos para a reprodução:
 
-##### 1- Crie duas instâncias virtuais no serviço Google Cloud (Você pode utilizar sua própria máquina caso tenha as mesmas características descritas) com a seguinte configuração:
+##### 1- Crie duas máquinas virtuais de preferência no serviço Google Cloud com a seguinte configuração (Obs. resultado da simulação é fortemente afetado pelo hardware ):
 - Região us-central (Iowa)
 - 4 vCPUs e 15 GB de memória
 - Ao menos 30 GB de disco para permitir a compilação do MPTCP
@@ -102,7 +102,7 @@ sudo apt install python-pip
 sudo pip install networkx
 sudo pip install matplotlib
 ```
-##### 6- Em uma das instâncias virtuais compilar o MPTCP:
+##### 6- Em uma das máquinas virtuais compile o MPTCP:
 ```
 git clone git://github.com/multipath-tcp/mptcp.git
 sudo mv -R mptcp/  /usr/src/
@@ -115,7 +115,7 @@ make modules
 make modules_install
 make install
 ```
-**7- Conectar a instância com TCP (Via painel de controle do google cloud ou cliente SSH de sua preferência)**
+**7- Conectar o servidor com TCP (painel de controle do google cloud ou cliente SSH)**
 
 Clonar o git do projeto:
 ```
@@ -133,7 +133,7 @@ sudo sh ./fattree.sh
 ```
 O resultado será exibido após a execução do script.
 
-**8- Conectar a instância com MPTCP (Via painel de controle do google cloud ou cliente SSH de sua preferência)**
+**8- Conectar a máquina com MPTCP  (painel de controle do google cloud ou cliente SSH )**
 
 Clonar o git do projeto:
 ```
