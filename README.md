@@ -48,8 +48,8 @@ A simulação foi baseada no código disponibilizado por Jean-Luc Watson, https:
 
 Para a simulação da topologia Fat-Tree foi utilizado o repositório disponibilizado por Pranav Yerabati Venkata (https://github.com/pranav93y) com algumas adaptações para o propósito desta reprodução. O uso do Mininet foi fortemente recomentado por grande parte dos pesquisadores que reproduziram este artigo, por esta razão manteve-se a sua utilização.
 
-Algumas considerações pessoais: Apesar da possibilidade de poder utilizar vários caminhos trazendo uma certa redundância na topologia Fat-tree, caso ocorra algum problema físico parece um pouco complicado a identificação do link para a manutenção. 
-A topologia escolhida para a comparação não possui características similares. As métricas utilizadas para comparação também não são as mesmas para jellyfish (Random Regular Graphs) e Fat-tree (bisection bandwidth).
+Algumas observações  pessoais: Apesar da possibilidade de poder utilizar vários caminhos trazendo uma certa redundância na topologia Fat-tree, caso ocorra algum problema físico parece um pouco complicado a identificação do link para a manutenção. 
+A topologia escolhida para comparação não possui características similares (funcionamento, número de servidores). As métricas utilizadas para comparação também não são as mesmas para jellyfish (Random Regular Graphs) e Fat-tree (bisection bandwidth).
 O simulador para Jellyfish e fat-tree foi disponibilizado pelos autores do MPTCP para a reprodução deste artigo. Este simulador não está disponível ao público. 
 
 
