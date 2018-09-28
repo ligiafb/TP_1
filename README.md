@@ -70,7 +70,6 @@ Para a reprodução da Figura 9 não foi necessário modificar o número de serv
 **Dados TCP para Tabela 1**<p align="left"><img src="https://image.ibb.co/m1TmU9/jellyfish_32srvrs.png" alt="dados_originais" border="0"></p> 
 **Dados MPTCP para Tabela 1**<p align="left"><img src="https://image.ibb.co/mw4h2U/jellyfish_32srvrs_mptcp.png" alt="dados_originais" border="0"></p> 
 
-**Figura 9**
 <p align="left">  <img src="https://image.ibb.co/jxzO7U/figure9repro.png" border="0"></p>
 
 ## Passos para a reprodução:
