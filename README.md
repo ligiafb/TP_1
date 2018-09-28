@@ -26,6 +26,10 @@ O gráfico (Figura 9) mostra a distribuição do número de caminhos distintos p
 
 A Tabela 1 mostra os resultados da execução de algumas simulações de pacotes de controle de congestionamento (TCP 1 e 8 fluxos e MPTCP) e dois algoritmos de roteamento (ECMP e K-Shortest-Path) nas distintas topologias Jelllyfish (780 servidores) e Fat-tree (686 servidores). Os resultados apontam que o uso do k shortest-paths em TCP com Jellyfish apresenta throughput semelhante à execução do ECMP em Fat-tree, isto mostra que Jellyfish alcança o mesmo desempenho da Fat–tree.  Outra característica observada foi que o uso do k-shortest-path apresenta melhores resultados quando comparado ao ECMP na topologia Jellyfish.
 
+Algumas observações  pessoais: Apesar da possibilidade de poder utilizar vários caminhos trazendo uma certa redundância na topologia Jellyfish, caso ocorra algum problema físico parece um pouco complicado a identificação do link para a manutenção. 
+A topologia escolhida para comparação não possui características similares (funcionamento, número de servidores). As métricas utilizadas para comparação também não são as mesmas para jellyfish (Random Regular Graphs) e Fat-tree (bisection bandwidth).
+O simulador para Jellyfish e fat-tree foi disponibilizado pelos autores do MPTCP para a reprodução deste artigo. Este simulador não está disponível ao público. 
+
 #### Detalhe sobre sua abordagem para reproduzir a figura. Se você escolheu uma plataforma ou ferramenta específica, explique por que você fez essa escolha. Destaque as vantagens da sua abordagem, bem como quaisquer inconvenientes. Houve algum desafio que você acertou ou suposições que você precisava fazer?
 
 Os experimentos foram executados em servidores criados na Google Cloud:
@@ -47,10 +51,6 @@ A princípio a simulação foi realizada em uma máquina virtual (em notebook pe
 A simulação foi baseada no código disponibilizado por Jean-Luc Watson, https://github.com/jlwatson. Este código simula a topologia Jellyfish, gera a média de throughput no algoritmo de roteamento selecionado (ECMP e K-Shortest-Path) com o número de fluxo escolhido. Entretanto, quando se utiliza um valor de fluxo superior a 3, em algumas simulações o resultado não é apresentado ou quando apresentado, os valores são contraditórios ao cenário configurado. Este mesmo problema foi observado em outros repositórios testados. Em reposta ao e-mail enviado à Jean-Luc Watson, o autor reportou uma falha de comunicação entre o Iperf e o Mininet que possivelmente foi causada devido à versão específica utilizada em seu trabalho (Mininet 2.2.2).  Este problema afeta a utilização do Mininet para limitar a largura de banda em cada link ao executar os testes Iperf, causando assim, uma inconsistência nos dados. Para tentar solucionar este problema foram testadas 4 versões anteriores do Mininet, voltando até a versão 2.0.0 apesar disso, não se obteve sucesso. Verificou-se então que em alguns testes eram computados o tráfego de 0KB/s para o cálculo do throughput, em outras situações o limite da largura de banda era superior ao configurado no início da simulação.  Neste sentido, optou-se pela utilização dos dados efetivos para a realização dos cálculos.  
 
 Para a simulação da topologia Fat-Tree foi utilizado o repositório disponibilizado por Pranav Yerabati Venkata (https://github.com/pranav93y) com algumas adaptações para o propósito desta reprodução. O uso do Mininet foi fortemente recomentado por grande parte dos pesquisadores que reproduziram este artigo, por esta razão manteve-se a sua utilização.
-
-Algumas observações  pessoais: Apesar da possibilidade de poder utilizar vários caminhos trazendo uma certa redundância na topologia Jellyfish, caso ocorra algum problema físico parece um pouco complicado a identificação do link para a manutenção. 
-A topologia escolhida para comparação não possui características similares (funcionamento, número de servidores). As métricas utilizadas para comparação também não são as mesmas para jellyfish (Random Regular Graphs) e Fat-tree (bisection bandwidth).
-O simulador para Jellyfish e fat-tree foi disponibilizado pelos autores do MPTCP para a reprodução deste artigo. Este simulador não está disponível ao público. 
 
 
 #### Qual o resultado que você conseguiu? Correspondeu ao papel original?
