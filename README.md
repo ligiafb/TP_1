@@ -70,6 +70,9 @@ Para a reprodução da Figura 9 não foi necessário modificar o número de serv
 **Dados TCP para Tabela 1**<p align="left"><img src="https://image.ibb.co/m1TmU9/jellyfish_32srvrs.png" alt="dados_originais" border="0"></p> 
 **Dados MPTCP para Tabela 1**<p align="left"><img src="https://image.ibb.co/mw4h2U/jellyfish_32srvrs_mptcp.png" alt="dados_originais" border="0"></p> 
 
+**Simulação Figura 9**
+https://image.ibb.co/jxzO7U/figure9repro.png
+
 ## Passos para a reprodução:
 
 ##### 1- Crie duas instâncias virtuais no serviço Google Cloud (Você pode utilizar sua própria máquina caso tenha as mesmas características descritas) com a seguinte configuração:
@@ -121,7 +124,7 @@ git clone https://github.com/ligiafb/TP_1.git
 cd TP_1/
 sudo python tcp.py
 ```
-A figura9 estará disponível na raiz do diretório, com o nome ***figure9.eps***
+A figura 9 esta disponível na raiz do diretório: ***figure9.eps***
 
 Os resultados de TCP com 1 e 8 fluxos com ECMP e K-shortest-Paths para topologia Jellyfish serão exibidos ao término da execução.
 
